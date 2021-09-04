@@ -1,5 +1,6 @@
 package com.example.apisuccessimplement;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -34,12 +35,14 @@ public class WishAdapter extends RecyclerView.Adapter<WishAdapter.WishViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull WishViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull WishViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         Datum data = datumList.get(position);
         holder.enCaption.setText(data.getCaptionEn());
         holder.bnCaption.setText(data.getCaptionBn());
         Picasso.get().load(data.getLink()).into(holder.imageView);
+
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

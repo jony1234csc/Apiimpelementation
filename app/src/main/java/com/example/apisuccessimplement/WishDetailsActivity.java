@@ -18,8 +18,10 @@ public class WishDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wish_details);
+
         detailsImage=findViewById(R.id.detailsIV);
         detailsText=findViewById(R.id.detailsTV);
+
         Datum datum= (Datum) getIntent().getSerializableExtra("article");
       Picasso.get().load(datum.getLink()).into(detailsImage);
       detailsText.setText(datum.getCaptionEn());

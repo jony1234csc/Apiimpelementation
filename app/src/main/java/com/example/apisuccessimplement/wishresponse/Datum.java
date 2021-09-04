@@ -13,10 +13,10 @@ public class Datum implements Serializable {
     @SerializedName("id")
     @Expose
     private Integer id;
-    @SerializedName("caption_en")
+    @SerializedName("description")
     @Expose
     private String captionEn;
-    @SerializedName("caption_bn")
+    @SerializedName("description_bn")
     @Expose
     private String captionBn;
     @SerializedName("link")

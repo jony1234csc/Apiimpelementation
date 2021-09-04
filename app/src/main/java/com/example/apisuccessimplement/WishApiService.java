@@ -6,6 +6,6 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface WishApiService {
-    @GET("mujib/api/letters")
+    @GET("api/news")
     Call<WishResponse> getWishResponse();
 }

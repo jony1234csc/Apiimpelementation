@@ -20,7 +20,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String BASE_URL = "https://ezze.dev/";
+    public static final String BASE_URL = "https://mujib100.live/";
     private static final String tag = "retrofit call";
     private RecyclerView recyclerView;
     private WishAdapter wishAdapter;
@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
                     wishAdapter = new WishAdapter(MainActivity.this, data);
                     recyclerView.setAdapter(wishAdapter);
                     recyclerView.setLayoutManager(linearLayoutManager);
+
+
 
                     Toast.makeText(MainActivity.this, "if: " +res.getMessage(), Toast.LENGTH_SHORT).show();
                 }else {
